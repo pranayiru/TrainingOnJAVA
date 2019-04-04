@@ -1,0 +1,12 @@
+login------30m
+dam  ------1h
+PIM- Product attribute, category attribute, Products, category, catalog  -----10 to 12h
+Admin  Extension engine: ERP :ZnodeABSConnector change status-------10h                                                               
+OMS- Pricing engine, Inventory, Warehouse  -----2h 30m                          
+Stores   ------10h                                                              
+Marketing- Promotions:Store associate all Profile -------8h
+CMS       ------- 12h                                                    
+Customers- Account ,users, User Profiles -----5h                              
+OMS- order   -------6h                                                           
+
+Marketing :Product Highlights--Vender with Associated Product
