@@ -7,7 +7,7 @@
 <suite name="Assignment 1">
 <!--  	The test for all the user log-in till landing page -->
  	<test name="log-in">
-  		<parameter name="browser" value="chrome"/>
+  		<parameter name="browser" value="mozila"/>
 	  	<parameter name="url"  value="automation" />	
 	  	<parameter name="username" value="admin@znode.com"/>
 	  	<parameter name="password"  value="admin12345" />	
