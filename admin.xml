@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-
-<!-- Pending ||| interaction.CursorStyle > Cursorstyle mid point for precision -->
-
-<suite name="Assignment 1">
+<suite name="Products">
 <!--  	The test for all the user log-in till landing page -->
  	<test name="log-in">
   		<parameter name="browser" value="mozila"/>
@@ -12,7 +9,8 @@
 	  	<parameter name="username" value="admin@znode.com"/>
 	  	<parameter name="password"  value="admin12345" />	
 	  	<classes>
-	  		<class name="login.Login"/>	
+	  		<class name="adminTC.LoginPage"/>	
 	    </classes>
   </test>
+  
 </suite>
