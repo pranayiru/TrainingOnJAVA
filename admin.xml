@@ -13,4 +13,15 @@
 	    </classes>
   </test>
   
+  <test name="navigate">	
+	  	<classes>
+	  		<class name="adminTC.NavigateToProducts"/>	
+	    </classes>
+  </test>
+  <test name="add-new-product">	
+	  	<classes>
+	  		<class name="adminTC.ProductsPage"/>	
+	    </classes>
+  </test>
+  
 </suite>

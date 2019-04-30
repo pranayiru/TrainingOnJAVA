@@ -5,7 +5,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import admin.Login;
-import commonUtilities.Browser;
+import commonUtility.Browser;
 
 
 public class LoginPage {
@@ -17,7 +17,7 @@ Login login;
 	@Parameters({"browser","url"})
 	public void openBrowser(String browser, String url)
 	{	
-		commonUtilities.Browser.openBrowser(browser, url);
+		commonUtility.Browser.openBrowser(browser, url);
 		System.out.println("browser opened");
 		Browser.maximizeBrowser();
 	}// End of Open browser test
@@ -33,4 +33,9 @@ Login login;
 		login.clickLogin();
 	}// End of details page
 	
+	/*@Test(priority=3)
+	public void clickLaterButton()
+	{
+		login.laterButtonPopUp();
+	}*/
 }

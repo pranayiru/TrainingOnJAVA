@@ -1,4 +1,4 @@
-package commonUtilities;
+package commonUtility;
 
 
 import java.time.Clock;
