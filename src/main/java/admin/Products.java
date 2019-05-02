@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import commonUtility.Browser;
+import commonUtilities.Browser;
 public class Products {
 
 	@FindBy(xpath = "//a[@data-test-selector='btnAddNew']")
@@ -25,6 +25,7 @@ public class Products {
 
 	@FindBy(xpath = "//div[@id='loading-div-background']")
 	private WebElement loader;
+	
 	
 	DateFormat dateFormat = new SimpleDateFormat("HHmmss");
 
@@ -41,7 +42,7 @@ public class Products {
 		addNew.click();
 		
 		//loadingWait(Browser.webDriver, loader);
-		loadingWait(7);
+		loadingWait(10);
 		
 		WebElement selectProductType = Browser.webDriver.findElement(By.xpath("//select[@data-test-selector='drpProductType']"));
 		
@@ -62,9 +63,11 @@ public class Products {
 		
 		WebElement selectOutOfStockOption = Browser.webDriver.findElement(By.xpath("//select[@data-test-selector='drpOutOfStockOptions']"));
 		
+		WebElement UOM = Browser.webDriver.findElement(By.xpath("//*[@data-test-selector='drpUOM']"));
+
 //		actions.moveToElement(selectOutOfStockOption);
 		
-		((JavascriptExecutor) Browser.webDriver).executeScript("arguments[0].scrollIntoView(true);", selectOutOfStockOption);
+		((JavascriptExecutor) Browser.webDriver).executeScript("arguments[0].scrollIntoView(true);", UOM);
 //		Thread.sleep(500);
 		
 		actions.perform();
@@ -73,7 +76,7 @@ public class Products {
 		
 		outOfStockOp.selectByValue("DontTrackInventory");
 		
-		WebElement selectShippingCost = Browser.webDriver.findElement(By.xpath("//select[@data-test-selector='drpShippingCostRules']"));
+		WebElement selectShippingCost = Browser.webDriver.findElement(By.xpath("//*[@data-test-selector='drpShippingcost']"));
 		
 		actions.moveToElement(selectShippingCost);
 		

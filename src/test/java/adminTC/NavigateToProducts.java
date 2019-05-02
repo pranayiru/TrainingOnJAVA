@@ -3,7 +3,7 @@ package adminTC;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-import commonUtility.Browser;
+import commonUtilities.Browser;
 import admin.Navigate;;
 
 public class NavigateToProducts {

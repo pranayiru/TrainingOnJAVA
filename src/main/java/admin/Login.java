@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import commonUtility.Browser;
+import commonUtilities.Browser;
 
 public class Login {
 

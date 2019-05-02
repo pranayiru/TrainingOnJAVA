@@ -5,7 +5,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import admin.Login;
-import commonUtility.Browser;
+import commonUtilities.Browser;
 
 
 public class LoginPage {
@@ -17,7 +17,7 @@ Login login;
 	@Parameters({"browser","url"})
 	public void openBrowser(String browser, String url)
 	{	
-		commonUtility.Browser.openBrowser(browser, url);
+		commonUtilities.Browser.openBrowser(browser, url);
 		System.out.println("browser opened");
 		Browser.maximizeBrowser();
 	}// End of Open browser test
