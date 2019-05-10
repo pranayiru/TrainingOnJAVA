@@ -30,9 +30,9 @@ public class Navigate {
 	{	
 		//loadingWait(Browser.webDriver, loader);
 		//Wait.EXPECT_NO_SPINNERS.apply(Browser.webDriver);
-		WebDriverWait wait = new WebDriverWait(Browser.webDriver, GlobalVariable.DelayMedium);
-		
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-div-background"))); // wait for loader to appear
+		//WebDriverWait wait = new WebDriverWait(Browser.webDriver, GlobalVariable.DelayMedium);
+		//wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-div-background"))); // wait for loader to appear
+		waitForLoader();
 		
 	    menu.click();
 	    
