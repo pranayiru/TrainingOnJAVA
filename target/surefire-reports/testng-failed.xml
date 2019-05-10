@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Products]">
+  <test thread-count="5" verbose="0" name="navigate(failed)">
+    <classes>
+      <class name="adminTC.NavigateToProducts">
+        <methods>
+          <include name="Navigate"/>
+        </methods>
+      </class> <!-- adminTC.NavigateToProducts -->
+    </classes>
+  </test> <!-- navigate(failed) -->
   <test thread-count="5" verbose="0" name="add-new-product(failed)">
     <classes>
       <class name="adminTC.ProductsPage">

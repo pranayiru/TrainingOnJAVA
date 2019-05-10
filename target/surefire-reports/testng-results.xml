@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Products" duration-ms="34424" started-at="2019-05-02T05:54:32Z" finished-at="2019-05-02T05:55:07Z">
+  <suite name="Products" duration-ms="24110" started-at="2019-05-07T10:02:30Z" finished-at="2019-05-07T10:02:54Z">
     <groups>
     </groups>
-    <test name="log-in" duration-ms="22279" started-at="2019-05-02T05:54:32Z" finished-at="2019-05-02T05:54:54Z">
+    <test name="log-in" duration-ms="13369" started-at="2019-05-07T10:02:30Z" finished-at="2019-05-07T10:02:43Z">
       <class name="adminTC.LoginPage">
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:adminTC.LoginPage@129a8472]" name="openBrowser" duration-ms="17933" started-at="2019-05-02T05:54:32Z" finished-at="2019-05-02T05:54:50Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:adminTC.LoginPage@129a8472]" name="openBrowser" duration-ms="10122" started-at="2019-05-07T10:02:30Z" finished-at="2019-05-07T10:02:40Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="setLoginDetails(java.lang.String, java.lang.String)[pri:2, instance:adminTC.LoginPage@129a8472]" name="setLoginDetails" duration-ms="4325" started-at="2019-05-02T05:54:50Z" finished-at="2019-05-02T05:54:54Z">
+        <test-method status="PASS" signature="setLoginDetails(java.lang.String, java.lang.String)[pri:2, instance:adminTC.LoginPage@129a8472]" name="setLoginDetails" duration-ms="3225" started-at="2019-05-07T10:02:40Z" finished-at="2019-05-07T10:02:43Z">
           <params>
             <param index="0">
               <value>
@@ -41,17 +41,17 @@
         </test-method> <!-- setLoginDetails -->
       </class> <!-- adminTC.LoginPage -->
     </test> <!-- log-in -->
-    <test name="navigate" duration-ms="4120" started-at="2019-05-02T05:54:55Z" finished-at="2019-05-02T05:54:59Z">
+    <test name="navigate" duration-ms="4993" started-at="2019-05-07T10:02:43Z" finished-at="2019-05-07T10:02:48Z">
       <class name="adminTC.NavigateToProducts">
-        <test-method status="PASS" signature="Navigate()[pri:1, instance:adminTC.NavigateToProducts@7e0ea639]" name="Navigate" duration-ms="4120" started-at="2019-05-02T05:54:55Z" finished-at="2019-05-02T05:54:59Z">
+        <test-method status="PASS" signature="Navigate()[pri:1, instance:adminTC.NavigateToProducts@7e0ea639]" name="Navigate" duration-ms="4992" started-at="2019-05-07T10:02:43Z" finished-at="2019-05-07T10:02:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigate -->
       </class> <!-- adminTC.NavigateToProducts -->
     </test> <!-- navigate -->
-    <test name="add-new-product" duration-ms="7861" started-at="2019-05-02T05:54:59Z" finished-at="2019-05-02T05:55:07Z">
+    <test name="add-new-product" duration-ms="5731" started-at="2019-05-07T10:02:48Z" finished-at="2019-05-07T10:02:54Z">
       <class name="adminTC.ProductsPage">
-        <test-method status="PASS" signature="AddProduct()[pri:0, instance:adminTC.ProductsPage@2d6e8792]" name="AddProduct" duration-ms="7860" started-at="2019-05-02T05:54:59Z" finished-at="2019-05-02T05:55:07Z">
+        <test-method status="PASS" signature="AddProduct()[pri:0, instance:adminTC.ProductsPage@2d6e8792]" name="AddProduct" duration-ms="5730" started-at="2019-05-07T10:02:48Z" finished-at="2019-05-07T10:02:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddProduct -->

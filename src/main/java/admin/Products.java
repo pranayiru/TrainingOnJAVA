@@ -14,13 +14,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import commonUtilities.Browser;
+import commonUtility.Browser;
+import commonUtility.GlobalVariable;
 public class Products {
 
 	@FindBy(xpath = "//a[@data-test-selector='btnAddNew']")
 	private WebElement addNew;
 	
-	@FindBy(xpath = "//a[@id='btnSaveNDraft']")
+	@FindBy(xpath = "//a[@id=\"btnSaveNDraft\"]")
 	private WebElement saveAsDraft;
 
 	@FindBy(xpath = "//div[@id='loading-div-background']")
@@ -42,16 +43,16 @@ public class Products {
 		addNew.click();
 		
 		//loadingWait(Browser.webDriver, loader);
-		loadingWait(10);
+		loadingWait(GlobalVariable.DelayMedium);
 		
 		WebElement selectProductType = Browser.webDriver.findElement(By.xpath("//select[@data-test-selector='drpProductType']"));
 		
 		Select SelectProductType = new Select(selectProductType);
 		
-		SelectProductType.selectByValue("GroupedProduct");
+		SelectProductType.selectByValue("BundleProduct");
 		
 		//loadingWait(Browser.webDriver, loader);
-		loadingWait(7);
+		loadingWait(GlobalVariable.DelayHigh);
 		
 		saveAsDraft.click();
 		

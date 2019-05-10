@@ -1,9 +1,14 @@
-package commonUtilities;
+package commonUtility;
 
 
 import java.time.Clock;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -11,6 +16,31 @@ public class Wait {
 
 	static WebDriverWait exWait;
 
+	
+	public static final ExpectedCondition<Boolean> EXPECT_NO_SPINNERS = new ExpectedCondition<Boolean>() {
+	    @Override
+	    public Boolean apply(WebDriver driver) {
+	        Boolean loaded = true;
+	        try {
+	        List<WebElement> spinners = driver.findElements(By.id("loading-div-background"));
+	        for (WebElement spinner : spinners) {
+	            if (spinner.getAttribute("style")=="display: none;") {
+	                loaded = false;
+	                break;
+	            }
+	            if (spinner.isDisplayed()) {
+	                loaded = false;
+	                break;
+	            }
+	        }
+	        }catch (Exception ex) {
+	            loaded = false;
+	        }
+	        return loaded;
+
+	    }
+	};
+	
 	
 	// To get the wait time and perform driver to stop till that time
 	public static void implicitWait(int waitTimeMili) // Getting waitTimeMili wait time

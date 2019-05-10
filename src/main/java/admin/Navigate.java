@@ -11,7 +11,9 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import commonUtilities.Browser;
+import commonUtility.Browser;
+import commonUtility.GlobalVariable;
+import commonUtility.Wait;
 
 public class Navigate {
 	@FindBy(xpath = "//a[@data-test-selector='linkNavMenu']")
@@ -27,11 +29,11 @@ public class Navigate {
 	public void NavigateToProduct()
 	{	
 		//loadingWait(Browser.webDriver, loader);
-		loadingWait(12);
+		//Wait.EXPECT_NO_SPINNERS.apply(Browser.webDriver);
 		menu.click();
-		loadingWait(5);
+		loadingWait(GlobalVariable.DelayLow);
 		linkProducts.click();
-		loadingWait(5);
+		loadingWait(GlobalVariable.DelayLow);
 		//loadingWait(Browser.webDriver, loader);
 	}
 	
@@ -43,23 +45,6 @@ public class Navigate {
 	    
 	    Browser.webDriver.manage().timeouts().implicitlyWait(wait, TimeUnit.SECONDS);
 	}
-	public static final ExpectedCondition<Boolean> EXPECT_NO_SPINNERS = new ExpectedCondition<Boolean>() {
-	    @Override
-	    public Boolean apply(WebDriver driver) {
-	        Boolean loaded = true;
-	        try {
-	        List<WebElement> spinners = driver.findElements(By.className("spinner"));
-	        for (WebElement spinner : spinners) {
-	            if (spinner.isDisplayed()) {
-	                loaded = false;
-	                break;
-	            }
-	        }
-	        }catch (Exception ex) {
-	            loaded = false;
-	        }
-	        return loaded;
-	    }
-	};
+	
 
 }

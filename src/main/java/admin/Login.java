@@ -5,7 +5,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import commonUtilities.Browser;
+import commonUtility.Browser;
+import commonUtility.GlobalVariable;
 
 public class Login {
 
@@ -40,6 +41,7 @@ public class Login {
 	public void clickLogin()
 	{
 		login.click();
+		loadingWait(GlobalVariable.DelayVeryHigh);
 		
 	}// End of clickLogin
 	
@@ -54,5 +56,8 @@ public class Login {
 		
 		later.click();
 
+	}
+	public void loadingWait(int wait) {
+	    Browser.webDriver.manage().timeouts().implicitlyWait(wait, TimeUnit.SECONDS);
 	}
 }

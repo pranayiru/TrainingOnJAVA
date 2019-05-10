@@ -4,7 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import admin.Products;
-import commonUtilities.Browser;
+import commonUtility.Browser;
 
 public class ProductsPage {
 
