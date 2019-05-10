@@ -2,8 +2,11 @@ package admin;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import commonUtility.Browser;
 import commonUtility.GlobalVariable;
@@ -41,7 +44,8 @@ public class Login {
 	public void clickLogin()
 	{
 		login.click();
-		loadingWait(GlobalVariable.DelayVeryHigh);
+		
+		waitForLoader();
 		
 	}// End of clickLogin
 	
@@ -52,12 +56,28 @@ public class Login {
 //				.pollingEvery(5, TimeUnit.SECONDS) 			
 //				.ignoring(NoSuchElementException.class);
 		
-		Browser.webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
-		later.click();
-
+		
+//		Browser.webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		try {
+			if(Browser.webDriver.findElement(By.xpath("//button[@id='Later']")).isDisplayed())
+			{
+				later.click();
+		
+				waitForLoader();
+			}
+		}
+		
+		catch(Exception ex)
+		{
+			
+		}
 	}
-	public void loadingWait(int wait) {
-	    Browser.webDriver.manage().timeouts().implicitlyWait(wait, TimeUnit.SECONDS);
+	
+	public void waitForLoader()
+	{
+		WebDriverWait wait = new WebDriverWait(Browser.webDriver, GlobalVariable.DelayVeryHigh);
+		
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-div-background")));
 	}
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Products" duration-ms="24110" started-at="2019-05-07T10:02:30Z" finished-at="2019-05-07T10:02:54Z">
+  <suite started-at="2019-05-10T06:48:44Z" name="Products" finished-at="2019-05-10T06:49:11Z" duration-ms="27100">
     <groups>
     </groups>
-    <test name="log-in" duration-ms="13369" started-at="2019-05-07T10:02:30Z" finished-at="2019-05-07T10:02:43Z">
+    <test started-at="2019-05-10T06:48:44Z" name="log-in" finished-at="2019-05-10T06:48:56Z" duration-ms="11940">
       <class name="adminTC.LoginPage">
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:adminTC.LoginPage@129a8472]" name="openBrowser" duration-ms="10122" started-at="2019-05-07T10:02:30Z" finished-at="2019-05-07T10:02:40Z">
+        <test-method signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:adminTC.LoginPage@7c729a55]" started-at="2019-05-10T06:48:44Z" name="openBrowser" finished-at="2019-05-10T06:48:51Z" duration-ms="7470" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,14 +16,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[automation]]>
+                <![CDATA[qa]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="setLoginDetails(java.lang.String, java.lang.String)[pri:2, instance:adminTC.LoginPage@129a8472]" name="setLoginDetails" duration-ms="3225" started-at="2019-05-07T10:02:40Z" finished-at="2019-05-07T10:02:43Z">
+        <test-method signature="setLoginDetails(java.lang.String, java.lang.String)[pri:2, instance:adminTC.LoginPage@7c729a55]" started-at="2019-05-10T06:48:51Z" name="setLoginDetails" finished-at="2019-05-10T06:48:52Z" duration-ms="859" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,19 +39,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setLoginDetails -->
+        <test-method signature="clickLaterButton()[pri:3, instance:adminTC.LoginPage@7c729a55]" started-at="2019-05-10T06:48:52Z" name="clickLaterButton" finished-at="2019-05-10T06:48:56Z" duration-ms="3587" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickLaterButton -->
       </class> <!-- adminTC.LoginPage -->
     </test> <!-- log-in -->
-    <test name="navigate" duration-ms="4993" started-at="2019-05-07T10:02:43Z" finished-at="2019-05-07T10:02:48Z">
+    <test started-at="2019-05-10T06:48:56Z" name="navigate" finished-at="2019-05-10T06:49:02Z" duration-ms="6322">
       <class name="adminTC.NavigateToProducts">
-        <test-method status="PASS" signature="Navigate()[pri:1, instance:adminTC.NavigateToProducts@7e0ea639]" name="Navigate" duration-ms="4992" started-at="2019-05-07T10:02:43Z" finished-at="2019-05-07T10:02:48Z">
+        <test-method signature="Navigate()[pri:1, instance:adminTC.NavigateToProducts@5158b42f]" started-at="2019-05-10T06:48:56Z" name="Navigate" finished-at="2019-05-10T06:49:02Z" duration-ms="6322" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigate -->
       </class> <!-- adminTC.NavigateToProducts -->
     </test> <!-- navigate -->
-    <test name="add-new-product" duration-ms="5731" started-at="2019-05-07T10:02:48Z" finished-at="2019-05-07T10:02:54Z">
+    <test started-at="2019-05-10T06:49:02Z" name="add-new-product" finished-at="2019-05-10T06:49:11Z" duration-ms="8813">
       <class name="adminTC.ProductsPage">
-        <test-method status="PASS" signature="AddProduct()[pri:0, instance:adminTC.ProductsPage@2d6e8792]" name="AddProduct" duration-ms="5730" started-at="2019-05-07T10:02:48Z" finished-at="2019-05-07T10:02:54Z">
+        <test-method signature="AddProduct()[pri:0, instance:adminTC.ProductsPage@3a93b025]" started-at="2019-05-10T06:49:02Z" name="AddProduct" finished-at="2019-05-10T06:49:11Z" duration-ms="8812" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddProduct -->

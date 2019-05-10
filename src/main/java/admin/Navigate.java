@@ -30,10 +30,17 @@ public class Navigate {
 	{	
 		//loadingWait(Browser.webDriver, loader);
 		//Wait.EXPECT_NO_SPINNERS.apply(Browser.webDriver);
-		menu.click();
-		loadingWait(GlobalVariable.DelayLow);
+		WebDriverWait wait = new WebDriverWait(Browser.webDriver, GlobalVariable.DelayMedium);
+		
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-div-background"))); // wait for loader to appear
+		
+	    menu.click();
+	    
+		loadingWait(GlobalVariable.DelayHigh);
+		
 		linkProducts.click();
-		loadingWait(GlobalVariable.DelayLow);
+		
+		waitForLoader();
 		//loadingWait(Browser.webDriver, loader);
 	}
 	
@@ -44,6 +51,13 @@ public class Navigate {
 //	    wait.until(ExpectedConditions.invisibilityOf(element)); // wait for loader to disappear
 	    
 	    Browser.webDriver.manage().timeouts().implicitlyWait(wait, TimeUnit.SECONDS);
+	}
+	
+	public void waitForLoader()
+	{
+		WebDriverWait wait = new WebDriverWait(Browser.webDriver, GlobalVariable.DelayVeryHigh);
+		
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-div-background")));
 	}
 	
 

@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Products]">
-  <test thread-count="5" verbose="0" name="navigate(failed)">
+<suite name="Failed suite [Products]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="log-in(failed)" verbose="0">
+    <parameter name="password" value="admin12345"/>
+    <parameter name="browser" value="mozila"/>
+    <parameter name="url" value="automation"/>
+    <parameter name="username" value="admin@znode.com"/>
     <classes>
-      <class name="adminTC.NavigateToProducts">
+      <class name="adminTC.LoginPage">
         <methods>
-          <include name="Navigate"/>
+          <include name="clickLaterButton"/>
         </methods>
-      </class> <!-- adminTC.NavigateToProducts -->
+      </class> <!-- adminTC.LoginPage -->
     </classes>
-  </test> <!-- navigate(failed) -->
-  <test thread-count="5" verbose="0" name="add-new-product(failed)">
-    <classes>
-      <class name="adminTC.ProductsPage">
-        <methods>
-          <include name="AddProduct"/>
-        </methods>
-      </class> <!-- adminTC.ProductsPage -->
-    </classes>
-  </test> <!-- add-new-product(failed) -->
+  </test> <!-- log-in(failed) -->
 </suite> <!-- Failed suite [Products] -->

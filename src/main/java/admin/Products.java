@@ -42,8 +42,9 @@ public class Products {
 	{
 		addNew.click();
 		
+		waitForLoader();
 		//loadingWait(Browser.webDriver, loader);
-		loadingWait(GlobalVariable.DelayMedium);
+//		loadingWait(GlobalVariable.DelayMedium);
 		
 		WebElement selectProductType = Browser.webDriver.findElement(By.xpath("//select[@data-test-selector='drpProductType']"));
 		
@@ -52,7 +53,7 @@ public class Products {
 		SelectProductType.selectByValue("BundleProduct");
 		
 		//loadingWait(Browser.webDriver, loader);
-		loadingWait(GlobalVariable.DelayHigh);
+		waitForLoader();
 		
 		saveAsDraft.click();
 		
@@ -77,7 +78,7 @@ public class Products {
 		
 		outOfStockOp.selectByValue("DontTrackInventory");
 		
-		WebElement selectShippingCost = Browser.webDriver.findElement(By.xpath("//*[@data-test-selector='drpShippingcost']"));
+		WebElement selectShippingCost = Browser.webDriver.findElement(By.xpath("//*[@data-test-selector=\"drpShippingcost\" or @data-test-selector=\"drpShippingCostRules\"]"));
 		
 		actions.moveToElement(selectShippingCost);
 		
@@ -89,14 +90,12 @@ public class Products {
 		
 		saveAsDraft.click();
 	}
-
 	
-	public void loadingWait(int wait) {
-//	    WebDriverWait wait = new WebDriverWait(driver, 10);
-//	    wait.until(ExpectedConditions.visibilityOf(element)); // wait for loader to appear
-//	    wait.until(ExpectedConditions.invisibilityOf(element)); // wait for loader to disappear
-	    
-	    Browser.webDriver.manage().timeouts().implicitlyWait(wait, TimeUnit.SECONDS);
+	public void waitForLoader()
+	{
+		WebDriverWait wait = new WebDriverWait(Browser.webDriver, GlobalVariable.DelayVeryHigh);
+		
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-div-background")));
 	}
 
 }

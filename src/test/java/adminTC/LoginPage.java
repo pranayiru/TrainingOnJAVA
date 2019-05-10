@@ -33,9 +33,9 @@ Login login;
 		login.clickLogin();
 	}// End of details page
 	
-	/*@Test(priority=3)
+	@Test(priority=3)
 	public void clickLaterButton()
 	{
 		login.laterButtonPopUp();
-	}*/
+	}
 }
