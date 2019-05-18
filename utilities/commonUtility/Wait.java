@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -45,7 +46,7 @@ public class Wait {
 	// To get the wait time and perform driver to stop till that time
 	public static void implicitWait(int waitTimeMili) // Getting waitTimeMili wait time
 	{
-		Browser.webDriver.manage().timeouts().implicitlyWait(waitTimeMili, TimeUnit.MILLISECONDS);
+		Browser.webDriver.manage().timeouts().implicitlyWait(waitTimeMili, TimeUnit.SECONDS);
 	}// End of wait implicitly 
 	
 	// No argument Explicit wait method to get the Explicit wait object (Default timeout is 60)
@@ -91,6 +92,12 @@ public class Wait {
 			return exWait;
 		}// End of All arguments  Explicit wait method		
 	
-	
+	//Wait for background loader to be invisible
+	public static void waitForLoader()
+	{
+		WebDriverWait wait = new WebDriverWait(Browser.webDriver, GlobalVariable.DelayVeryHigh);
+		
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-div-background")));
+	}// End of waiting for loader
 		
 }// End of DriverCapabilities

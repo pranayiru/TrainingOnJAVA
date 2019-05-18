@@ -1,15 +1,16 @@
 package admin;
 
-import java.util.concurrent.TimeUnit;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import commonUtility.Browser;
 import commonUtility.GlobalVariable;
+import commonUtility.Wait;
 
 public class Login {
 
@@ -56,21 +57,38 @@ public class Login {
 //				.pollingEvery(5, TimeUnit.SECONDS) 			
 //				.ignoring(NoSuchElementException.class);
 		
-		
-		
 //		Browser.webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
 		try {
+			Thread.sleep(2000);
+		
 			if(Browser.webDriver.findElement(By.xpath("//button[@id='Later']")).isDisplayed())
 			{
+				WebDriverWait wait = new WebDriverWait(Browser.webDriver, GlobalVariable.DelayVeryHigh);
+				
+				wait.until(ExpectedConditions.elementToBeClickable(later)); 
+				
+//				Browser.webDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+				
 				later.click();
 		
 				waitForLoader();
-			}
+			}	
+		}
+		
+		catch(NullPointerException ex)
+		{
+			ex.getMessage();
+		}
+		
+		catch(NoSuchElementException ex)
+		{
+			ex.getMessage();
 		}
 		
 		catch(Exception ex)
 		{
-			
+			ex.printStackTrace();
 		}
 	}
 	
@@ -80,4 +98,5 @@ public class Login {
 		
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-div-background")));
 	}
+	
 }

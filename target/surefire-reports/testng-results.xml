@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-05-10T06:48:44Z" name="Products" finished-at="2019-05-10T06:49:11Z" duration-ms="27100">
+  <suite started-at="2019-05-18T10:15:36Z" name="Products" finished-at="2019-05-18T10:16:16Z" duration-ms="40259">
     <groups>
     </groups>
-    <test started-at="2019-05-10T06:48:44Z" name="log-in" finished-at="2019-05-10T06:48:56Z" duration-ms="11940">
+    <test started-at="2019-05-18T10:15:36Z" name="log-in" finished-at="2019-05-18T10:15:49Z" duration-ms="13511">
       <class name="adminTC.LoginPage">
-        <test-method signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:adminTC.LoginPage@7c729a55]" started-at="2019-05-10T06:48:44Z" name="openBrowser" finished-at="2019-05-10T06:48:51Z" duration-ms="7470" status="PASS">
+        <test-method signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:adminTC.LoginPage@7c729a55]" started-at="2019-05-18T10:15:36Z" name="openBrowser" finished-at="2019-05-18T10:15:43Z" duration-ms="7446" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,14 +16,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[qa]]>
+                <![CDATA[automation]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="setLoginDetails(java.lang.String, java.lang.String)[pri:2, instance:adminTC.LoginPage@7c729a55]" started-at="2019-05-10T06:48:51Z" name="setLoginDetails" finished-at="2019-05-10T06:48:52Z" duration-ms="859" status="PASS">
+        <test-method signature="setLoginDetails(java.lang.String, java.lang.String)[pri:2, instance:adminTC.LoginPage@7c729a55]" started-at="2019-05-18T10:15:43Z" name="setLoginDetails" finished-at="2019-05-18T10:15:47Z" duration-ms="3999" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,27 +39,43 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setLoginDetails -->
-        <test-method signature="clickLaterButton()[pri:3, instance:adminTC.LoginPage@7c729a55]" started-at="2019-05-10T06:48:52Z" name="clickLaterButton" finished-at="2019-05-10T06:48:56Z" duration-ms="3587" status="PASS">
+        <test-method signature="clickLaterButton()[pri:3, instance:adminTC.LoginPage@7c729a55]" started-at="2019-05-18T10:15:47Z" name="clickLaterButton" finished-at="2019-05-18T10:15:49Z" duration-ms="2046" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickLaterButton -->
       </class> <!-- adminTC.LoginPage -->
     </test> <!-- log-in -->
-    <test started-at="2019-05-10T06:48:56Z" name="navigate" finished-at="2019-05-10T06:49:02Z" duration-ms="6322">
+    <test started-at="2019-05-18T10:15:49Z" name="navigate" finished-at="2019-05-18T10:15:53Z" duration-ms="4360">
       <class name="adminTC.NavigateToProducts">
-        <test-method signature="Navigate()[pri:1, instance:adminTC.NavigateToProducts@5158b42f]" started-at="2019-05-10T06:48:56Z" name="Navigate" finished-at="2019-05-10T06:49:02Z" duration-ms="6322" status="PASS">
+        <test-method signature="Navigate()[pri:1, instance:adminTC.NavigateToProducts@5158b42f]" started-at="2019-05-18T10:15:49Z" name="Navigate" finished-at="2019-05-18T10:15:53Z" duration-ms="4359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigate -->
       </class> <!-- adminTC.NavigateToProducts -->
     </test> <!-- navigate -->
-    <test started-at="2019-05-10T06:49:02Z" name="add-new-product" finished-at="2019-05-10T06:49:11Z" duration-ms="8813">
+    <test started-at="2019-05-18T10:15:53Z" name="add-new-product" finished-at="2019-05-18T10:16:03Z" duration-ms="9748">
       <class name="adminTC.ProductsPage">
-        <test-method signature="AddProduct()[pri:0, instance:adminTC.ProductsPage@3a93b025]" started-at="2019-05-10T06:49:02Z" name="AddProduct" finished-at="2019-05-10T06:49:11Z" duration-ms="8812" status="PASS">
+        <test-method signature="AddProduct()[pri:0, instance:adminTC.ProductsPage@35cabb2a]" started-at="2019-05-18T10:15:53Z" name="AddProduct" finished-at="2019-05-18T10:16:02Z" duration-ms="8109" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddProduct -->
+        <test-method signature="FilterProduct()[pri:1, instance:adminTC.ProductsPage@35cabb2a]" started-at="2019-05-18T10:16:02Z" name="FilterProduct" finished-at="2019-05-18T10:16:03Z" duration-ms="1639" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FilterProduct -->
       </class> <!-- adminTC.ProductsPage -->
     </test> <!-- add-new-product -->
+    <test started-at="2019-05-18T10:16:03Z" name="edit-product" finished-at="2019-05-18T10:16:16Z" duration-ms="12611">
+      <class name="adminTC.AddRemainingDetailsOfProduct">
+        <test-method signature="ClickEdit()[pri:0, instance:adminTC.AddRemainingDetailsOfProduct@49139829]" started-at="2019-05-18T10:16:03Z" name="ClickEdit" finished-at="2019-05-18T10:16:05Z" duration-ms="1963" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickEdit -->
+        <test-method signature="EditProduct()[pri:1, instance:adminTC.AddRemainingDetailsOfProduct@49139829]" started-at="2019-05-18T10:16:05Z" name="EditProduct" finished-at="2019-05-18T10:16:16Z" duration-ms="10646" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditProduct -->
+      </class> <!-- adminTC.AddRemainingDetailsOfProduct -->
+    </test> <!-- edit-product -->
   </suite> <!-- Products -->
 </testng-results>

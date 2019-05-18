@@ -11,4 +11,6 @@ public class GlobalVariable {
 	public static final int DelayHigh = 15;
 	
 	public static final int DelayVeryHigh = 20;
+	
+	public static String productName = "";
 }

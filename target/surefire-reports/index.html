@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Products" class="navigator-link ">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -107,6 +107,21 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Products" title="adminTC.AddRemainingDetailsOfProduct" class="method navigator-link" hash-for-method="ClickEdit">ClickEdit</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Products" title="adminTC.AddRemainingDetailsOfProduct" class="method navigator-link" hash-for-method="EditProduct">EditProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Products" title="adminTC.ProductsPage" class="method navigator-link" hash-for-method="FilterProduct">FilterProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Products" title="adminTC.NavigateToProducts" class="method navigator-link" hash-for-method="Navigate">Navigate</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -117,7 +132,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Products" title="adminTC.LoginPage" class="method navigator-link" hash-for-method="openBrowser(mozila, qa)">openBrowser(mozila, qa)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Products" title="adminTC.LoginPage" class="method navigator-link" hash-for-method="openBrowser(mozila, automation)">openBrowser(mozila, automation)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -155,6 +170,28 @@
           <div class="suite-Products-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">adminTC.AddRemainingDetailsOfProduct</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ClickEdit">
+                  </a> <!-- ClickEdit -->
+                  <span class="method-name">ClickEdit</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="EditProduct">
+                  </a> <!-- EditProduct -->
+                  <span class="method-name">EditProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Products-class-passed -->
+          <div class="suite-Products-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">adminTC.LoginPage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -167,10 +204,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="openBrowser(mozila, qa)">
-                  </a> <!-- openBrowser(mozila, qa) -->
+                  <a name="openBrowser(mozila, automation)">
+                  </a> <!-- openBrowser(mozila, automation) -->
                   <span class="method-name">openBrowser</span>
-                  <span class="parameters">(mozila, qa)</span>
+                  <span class="parameters">(mozila, automation)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -196,6 +233,13 @@
                   <span class="method-name">AddProduct</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="FilterProduct">
+                  </a> <!-- FilterProduct -->
+                  <span class="method-name">FilterProduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Products-class-passed -->
         </div> <!-- panel Products -->
@@ -211,7 +255,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;log-in&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;password&quot; value=&quot;admin12345&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;mozila&quot;/&gt;
-    &lt;parameter name=&quot;url&quot; value=&quot;qa&quot;/&gt;
+    &lt;parameter name=&quot;url&quot; value=&quot;automation&quot;/&gt;
     &lt;parameter name=&quot;username&quot; value=&quot;admin@znode.com&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;adminTC.LoginPage&quot;/&gt;
@@ -227,6 +271,11 @@
       &lt;class name=&quot;adminTC.ProductsPage&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- add-new-product --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;edit-product&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;adminTC.AddRemainingDetailsOfProduct&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- edit-product --&gt;
 &lt;/suite&gt; &lt;!-- Products --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -245,6 +294,9 @@
               </li>
               <li>
                 <span class="test-name">add-new-product (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">edit-product (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -270,32 +322,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'AddProduct')
-data.setCell(0, 2, 'adminTC.ProductsPage')
-data.setCell(0, 3, 8812);
+data.setCell(0, 1, 'EditProduct')
+data.setCell(0, 2, 'adminTC.AddRemainingDetailsOfProduct')
+data.setCell(0, 3, 10646);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'openBrowser')
-data.setCell(1, 2, 'adminTC.LoginPage')
-data.setCell(1, 3, 7470);
+data.setCell(1, 1, 'AddProduct')
+data.setCell(1, 2, 'adminTC.ProductsPage')
+data.setCell(1, 3, 8109);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Navigate')
-data.setCell(2, 2, 'adminTC.NavigateToProducts')
-data.setCell(2, 3, 6322);
+data.setCell(2, 1, 'openBrowser')
+data.setCell(2, 2, 'adminTC.LoginPage')
+data.setCell(2, 3, 7446);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'clickLaterButton')
-data.setCell(3, 2, 'adminTC.LoginPage')
-data.setCell(3, 3, 3587);
+data.setCell(3, 1, 'Navigate')
+data.setCell(3, 2, 'adminTC.NavigateToProducts')
+data.setCell(3, 3, 4359);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'setLoginDetails')
 data.setCell(4, 2, 'adminTC.LoginPage')
-data.setCell(4, 3, 859);
+data.setCell(4, 3, 3999);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'clickLaterButton')
+data.setCell(5, 2, 'adminTC.LoginPage')
+data.setCell(5, 3, 2046);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'ClickEdit')
+data.setCell(6, 2, 'adminTC.AddRemainingDetailsOfProduct')
+data.setCell(6, 3, 1963);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'FilterProduct')
+data.setCell(7, 2, 'adminTC.ProductsPage')
+data.setCell(7, 3, 1639);
 window.suiteTableData['Products']= { tableData: data, tableDiv: 'times-div-Products'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
               <div id="times-div-Products">
               </div> <!-- times-div-Products -->
             </div> <!-- times-div -->
@@ -323,30 +387,45 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">adminTC.LoginPage</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">openBrowser(mozila, qa)</span>
+                <span class="method-name">openBrowser(mozila, automation)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">setLoginDetails(admin@znode.com, admin12345)</span>
-                <span class="method-start">7474 ms</span>
+                <span class="method-start">7448 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clickLaterButton</span>
-                <span class="method-start">8334 ms</span>
+                <span class="method-start">11448 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">adminTC.NavigateToProducts</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">Navigate</span>
-                <span class="method-start">11943 ms</span>
+                <span class="method-start">13516 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">adminTC.ProductsPage</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">AddProduct</span>
-                <span class="method-start">18269 ms</span>
+                <span class="method-start">17879 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">FilterProduct</span>
+                <span class="method-start">25988 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">adminTC.AddRemainingDetailsOfProduct</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ClickEdit</span>
+                <span class="method-start">27631 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">EditProduct</span>
+                <span class="method-start">29595 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

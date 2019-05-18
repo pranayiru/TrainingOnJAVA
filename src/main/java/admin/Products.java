@@ -3,8 +3,6 @@ package admin;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -15,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import commonUtility.Browser;
+import commonUtility.Save;
 import commonUtility.GlobalVariable;
 public class Products {
 
@@ -27,6 +26,11 @@ public class Products {
 	@FindBy(xpath = "//div[@id='loading-div-background']")
 	private WebElement loader;
 	
+	@FindBy(xpath = "//button[@data-test-selector='btnToggle']")
+	private static WebElement btnToggle;
+	
+	@FindBy(xpath = "//a[@data-test-selector='linkSaveNClose']")
+	private static WebElement btnSaveNClose;
 	
 	DateFormat dateFormat = new SimpleDateFormat("HHmmss");
 
@@ -57,7 +61,9 @@ public class Products {
 		
 		saveAsDraft.click();
 		
-		Browser.webDriver.findElement(By.xpath("//input[@data-test-selector='txtProductName']")).sendKeys("Automation" + date1);
+		GlobalVariable.productName = "Automation" + date1;
+		
+		Browser.webDriver.findElement(By.xpath("//input[@data-test-selector='txtProductName']")).sendKeys(GlobalVariable.productName);
 		
 		Browser.webDriver.findElement(By.xpath("//input[@data-test-selector='txtSKU']")).sendKeys("Automation" + date1);
 		
@@ -88,7 +94,9 @@ public class Products {
 		
 		shippingCost.selectByValue("QuantityBasedRate");
 		
-		saveAsDraft.click();
+		clickSaveAndClose();
+		
+		waitForLoader();
 	}
 	
 	public void waitForLoader()
@@ -97,5 +105,17 @@ public class Products {
 		
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-div-background")));
 	}
-
+	
+	private void clickSaveAndClose()
+	{
+		WebDriverWait wait = new WebDriverWait(Browser.webDriver, GlobalVariable.DelayVeryHigh);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(btnToggle)); 
+		
+		btnToggle.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(btnSaveNClose)); 
+		
+		btnSaveNClose.click();
+	}
 }
