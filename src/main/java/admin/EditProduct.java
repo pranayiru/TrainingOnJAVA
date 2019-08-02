@@ -121,7 +121,7 @@ public class EditProduct {
 	
 	public void AddProductDetails()
 	{
-		ProductInfo();
+//		ProductInfo();
 		
 		ProductDetails();
 		

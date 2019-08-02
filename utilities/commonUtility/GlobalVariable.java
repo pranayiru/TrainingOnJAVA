@@ -1,5 +1,7 @@
 package commonUtility;
 
+import java.util.concurrent.TimeUnit;
+
 public class GlobalVariable {
 
 	public static final int DelayVeryLow = 2;

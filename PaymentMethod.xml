@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Products">
+<!--  	The test for all the user log-in till landing page -->
+ 	<test name="log-in">
+  		<parameter name="browser" value="mozila"/>
+	  	<parameter name="url"  value="automation" />	
+	  	<parameter name="username" value="admin@znode.com"/>
+	  	<parameter name="password"  value="admin12345" />	
+	  	<classes>
+	  		<class name="adminTC.LoginPage"/>	
+	    </classes>
+  </test>
+  
+  <test name="navigate">	
+	  	<classes>
+	  		<class name="PaymentMethod.CreditCard"/>	
+	    </classes>
+  </test>
+  
+</suite>

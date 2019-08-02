@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -44,9 +45,24 @@ public class Products {
 	
 	public void AddNewProduct()
 	{
-		addNew.click();
+		try {
+			if(addNew.isDisplayed())
+			{
+				addNew.click();
+			
+				waitForLoader();
+			}
+		}
 		
-		waitForLoader();
+		catch(ElementNotVisibleException ex)
+		{
+			ex.getMessage();
+		}
+		
+		catch(Exception ex)
+		{
+			ex.getMessage();
+		}
 		//loadingWait(Browser.webDriver, loader);
 //		loadingWait(GlobalVariable.DelayMedium);
 		

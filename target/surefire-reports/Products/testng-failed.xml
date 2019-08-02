@@ -1,13 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Products]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="blank-validations(failed)" verbose="0">
+    <parameter name="valOutOfStockMessage" value="Out-of-Stock Options field is required."/>
+    <parameter name="valProductNameMessage" value="Product Name field is required."/>
+    <parameter name="valSKUMessage" value="SKU field is required."/>
+    <parameter name="valProductCodeMessage" value="Product Code field is required."/>
+    <parameter name="valShippingCostMessage" value="Shipping Cost field is required."/>
+    <classes>
+      <class name="adminTC.ProductInfo.VerifyBlankValidations">
+        <methods>
+          <include name="VerifyMessages" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- adminTC.ProductInfo.VerifyBlankValidations -->
+    </classes>
+  </test> <!-- blank-validations(failed) -->
+  <test thread-count="5" name="add-new-product(failed)" verbose="0">
+    <classes>
+      <class name="adminTC.ProductsPage">
+        <methods>
+          <include name="AddProduct"/>
+        </methods>
+      </class> <!-- adminTC.ProductsPage -->
+    </classes>
+  </test> <!-- add-new-product(failed) -->
   <test thread-count="5" name="edit-product(failed)" verbose="0">
     <classes>
       <class name="adminTC.AddRemainingDetailsOfProduct">
         <methods>
+          <include name="ClickEdit"/>
           <include name="EditProduct"/>
         </methods>
       </class> <!-- adminTC.AddRemainingDetailsOfProduct -->
     </classes>
   </test> <!-- edit-product(failed) -->
+  <test thread-count="5" name="add-seo-details(failed)" verbose="0">
+    <classes>
+      <class name="adminTC.SEO">
+        <methods>
+          <include name="ClickEdit"/>
+        </methods>
+      </class> <!-- adminTC.SEO -->
+    </classes>
+  </test> <!-- add-seo-details(failed) -->
+  <test thread-count="5" name="associate-category(failed)" verbose="0">
+    <classes>
+      <class name="adminTC.AssociateCategory">
+        <methods>
+          <include name="Category"/>
+        </methods>
+      </class> <!-- adminTC.AssociateCategory -->
+    </classes>
+  </test> <!-- associate-category(failed) -->
 </suite> <!-- Failed suite [Products] -->

@@ -18,14 +18,39 @@
 	  		<class name="adminTC.NavigateToProducts"/>	
 	    </classes>
   </test>
+  
+  <test name="blank-validations">	
+  	<parameter name="valProductNameMessage" value="Product Name field is required."/>
+  	<parameter name="valSKUMessage" value="SKU field is required."/>
+  	<parameter name="valProductCodeMessage" value="Product Code field is required."/>
+  	<parameter name="valOutOfStockMessage" value="Out-of-Stock Options field is required."/>
+  	<parameter name="valShippingCostMessage" value="Shipping Cost field is required."/>
+	  	<classes>
+	  		<class name="adminTC.ProductInfo.VerifyBlankValidations"/>	
+	    </classes>
+  </test>
+  
   <test name="add-new-product">	
 	  	<classes>
 	  		<class name="adminTC.ProductsPage"/>	
 	    </classes>
   </test>
+  
   <test name="edit-product">	
 	  	<classes>
 	  		<class name="adminTC.AddRemainingDetailsOfProduct"/>	
+	    </classes>
+  </test>
+  
+   <test name="add-seo-details">	
+	  	<classes>
+	  		<class name="adminTC.SEO"/>	
+	    </classes>
+  </test>
+  
+  <test name="associate-category">	
+	  	<classes>
+	  		<class name="adminTC.AssociateCategory"/>	
 	    </classes>
   </test>
   
