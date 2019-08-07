@@ -4,17 +4,19 @@ package admin;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadDataFile {
 	
-	XSSFSheet sheet;
-	XSSFRow row;
-	private XSSFWorkbook workbook;
+	Sheet sheet;
+	Row row;
+	private Workbook workbook;
 	int colNum = 0;
 	
 	public void dataFile(String fileName)
@@ -26,7 +28,23 @@ public class ReadDataFile {
 		try {
 				fis = new FileInputStream(pathTillProject + "\\Data Files\\" + fileName);
 				
-				workbook = new XSSFWorkbook(fis);
+//				workbook = new XSSFWorkbook(fis);
+				
+				String fileExtensionName = fileName.substring(fileName.indexOf("."));
+				
+			    //Check condition if the file is xlsx file
+			    if(fileExtensionName.equals(".xlsx"))
+			    {
+				    //If it is xlsx file then create object of XSSFWorkbook class
+				    	workbook = new XSSFWorkbook(fis);
+			    }
+			    
+			    //Check condition if the file is xls file
+			    else if(fileExtensionName.equals(".xls"))
+			    {
+			        //If it is xls file then create object of XSSFWorkbook class
+			    	workbook = new HSSFWorkbook(fis);
+			    }
 				
 				sheet = workbook.getSheet("Sheet1");
 				
